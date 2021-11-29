@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     use HasFactory;
+
+    public $with = [
+        'genre'
+    ];
+
+    public function genre(){
+        return $this->belongsTo(Genre::class);
+    }
 }

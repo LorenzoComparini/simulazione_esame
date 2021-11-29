@@ -12,6 +12,6 @@ class BooksController extends Controller
     }
 
     public function details($id){
-        return Book::where('id', $id)->get();
+        return Book::where('id', $id)->first();
     }
 }
