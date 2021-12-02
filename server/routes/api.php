@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BooksController;
+use App\Http\Controllers\GenresController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/list', [BooksController::class, 'list']);
 Route::get('/details/{id}', [BooksController::class, 'details']);
+Route::get('/genres/list', [GenresController::class, 'list']);
